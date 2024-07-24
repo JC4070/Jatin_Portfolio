@@ -1,0 +1,319 @@
+
+
+body{
+    background:rgb(0, 0, 0);
+    color: rgb(251, 249, 249);
+
+}
+.profile {
+     position: absolute;/* Position the image absolutely */
+    top: 55%; /* Position the top edge at 50% of the screen height */
+    left: 78%; /* Position the left edge at 50% of the screen width */
+    transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
+    height: 70%;
+    width: 35%;
+
+}
+
+.name{
+    text-align: left;
+}
+
+
+
+
+.container{
+    padding: 10px 02%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 170px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+    color: sandybrown;
+    text-decoration: none; /*remove the underline from the link*/
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{ /*this will focous on elements after a tag like home, content etc*/
+    content: "";
+    width: 0%; /*intially the under line will be invisible because it is 0*/
+    height: 3px;
+    background: rgb(207, 213, 218);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+
+}
+
+nav ul li a:hover::after{/*this will focous when we hover on it*/
+    width: 100%; /*and now when we hover on it it will be visible because its width is 100*/
+}
+
+.header-text{
+    margin-top: 8%;
+    font-size: 23px;
+}
+
+.header-text h1{
+    font-size: 65px;
+    margin-top: 20px;
+
+}
+
+.center{
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/*-------------About----------------------*/
+#About{
+    padding: 20px 0;
+    color: rgb(249, 190, 148);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col1 img{
+    width: 90%;
+    border-radius: 20px;
+
+}
+
+.col1{
+    flex-basis: 30%;/*from left it will take the 35% */
+}
+.col2{
+    flex-basis: 70%;/*from left it will take the 60% and there will be 5% os space between two cols. */
+}
+
+#title{
+    font-size: 35px;
+    font-weight: bold;
+    color: chocolate;
+}
+
+.col2 p{
+    padding: 0;
+    margin: 2px 10px;
+    font-size: 20px;
+}
+
+#space{
+    margin-bottom: 20px;
+}
+
+.questions p{
+    color: coral;
+}
+
+.more-text{
+    display: none;
+    color: rgb(249, 190, 148);
+}
+
+.btn{
+    background-color: chocolate;
+    cursor: pointer;
+
+}
+
+.text.show-more .more-text{
+    display: inline;
+}
+/*----------------contact---------*/
+.contacts a{
+    color: rgb(239, 174, 121);
+}
+
+.contacts a:hover {
+    color:  darkred;
+}
+
+.contacts a[href^="mailto:"] {
+    color: rgb(239, 174, 121);
+}
+
+  /* Change color of email links on hover to dark red */
+.contacts a[href^="mailto:"]:hover {
+    color: darkred;
+}
+.adjustment h1{
+    text-align: center;
+    color: chocolate;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.contacts i{
+    color: aliceblue;
+}
+
+.contacts ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.contacts ul li{
+    margin: 30px;
+    font-size: 25px;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.form{
+   text-align: center;
+}
+
+fieldset{
+    font-size: 25px;
+    margin: 10px;
+}
+
+#wrapper {
+
+    margin-top: 20px;
+    padding-top: 10px;
+    border: 1px solid rgb(239, 198, 128);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form fieldset legend {
+    color: chocolate;
+    border: 1px solid rgb(239, 198, 128);
+    padding: 2px;
+    font-weight: bold;}
+
+.form table {
+        margin: 7px;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+.form fieldset {
+        margin: 20px;
+    }
+
+.form td {
+    padding: 3px;
+    color: rgb(249, 190, 148);
+}
+
+/*----------------resume--------------*/
+
+h1{
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+}
+
+.line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main {
+    margin-left: 10px;
+}
+
+main p{
+    margin-top: 10px;
+}
+
+.list{
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.rcolour{
+    color: burlywood;
+}
+
+.rcolour2{
+    color: darkgoldenrod;
+}
+
+/*------------projects--------------------*/
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 30px;
+
+}
+
+.project {
+    display: none;
+    text-align: center;
+}
+
+.project.active {
+    display:block;
+}
+
+.images{
+    width: 300px;
+    height: 150px;
+}
+
+.buttns{
+    display: inline;
+}
+
+/*--------responsive----------*/
+@media screen and (max-width: 1300px) {
+    .profile {
+        position: absolute;
+        margin-top: 40px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        height: 500px;
+    }
+    #footer{
+        display: none;
+    }
+}
+@media screen and (max-width: 2700px) {
+    .header-text p{
+        font-size: 37px;
+    }
+    #footer{
+        display: none;
+    }
+}
